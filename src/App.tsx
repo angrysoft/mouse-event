@@ -136,7 +136,7 @@ function App() {
               name="delay"
               value={delay}
               onChange={(ev) => {
-                let num = Number(ev.target.value ?? "10");
+                const num = Number(ev.target.value ?? "10");
                 setDelay(Math.floor(num));
               }}
               required
