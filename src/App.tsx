@@ -1,5 +1,4 @@
 import { SyntheticEvent, useCallback, useEffect, useState } from "react";
-import "./App.css";
 
 function App() {
   const [catchEvent, setCatchEvent] = useState(false);
@@ -17,8 +16,9 @@ function App() {
 
   const handleCatchEvent = useCallback(
     async (ev: MouseEvent) => {
+
       if (!catchEvent) return;
-      console.log("fetch: ", url);
+      console.log(ev);
       setCatchEvent(false);
       if (url) {
         const res = await fetch(url);
